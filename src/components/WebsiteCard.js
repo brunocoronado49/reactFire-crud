@@ -18,25 +18,32 @@ const WebsiteCard = ({link}) => {
 
     return (
         <div 
-            className="card mb-3 card-website"
-            key={link.id}
-            onClick={() => navigate(`/edit-website/${link.id}`)}>
+            className="card mb-4"
+            key={link.id}>
                 <div className="card-body">
                     <div className="d-flex jusitify-content-between">
                         <h4>{link.name}</h4>
-                        <button
-                            className="btn btn-danger btn-sm d-flex align-items-center"
-                            onClick={(event) => {
-                                event.stopPropagation();
-                                onDeleteLink(link.id)
-                            }}>
-                                <i className="material-icons">close</i>
-                        </button>
                     </div>
                     <p>{link.description}</p>
-                    <a href={link.url} target="_blank" rel="noopener noreferrer">
+                    <a
+                        href={link.url}
+                        className="btn btn-primary m-2" 
+                        target="_blank" rel="noopener noreferrer">
                         Go to Website
                     </a>
+                    <button 
+                        className="btn btn-success m-2"
+                        onClick={() => navigate(`/edit-website/${link.id}`)}>
+                        Edit
+                    </button>
+                    <button 
+                        className="btn btn-danger m-2"
+                        onClick={(event) => {
+                            event.stopPropagation();
+                            onDeleteLink(link.id)
+                        }}>
+                        delete
+                    </button>
                 </div>
         </div>
     )

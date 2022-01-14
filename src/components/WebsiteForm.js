@@ -124,7 +124,7 @@ const WebsiteForm = (props) => {
                                 className="btn btn-primary w-100" 
                                 type="submit"
                                 disabled={!links.url || !links.name}>
-                                    {props.currentId === "" ? "Create" : "Update"}
+                                    Save
                                 </button>
                         </div>
                     </form>

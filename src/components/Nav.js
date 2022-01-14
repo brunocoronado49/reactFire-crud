@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { AiOutlineSave } from "react-icons/ai";
 import { SiFirebase } from "react-icons/si";
 
 import React from "react";
@@ -30,7 +29,7 @@ const Nav = () => {
                 className="d-flex align-items-center btn btn-primary shadow-none"
                 to="/create-website"
               >
-                <AiOutlineSave className="me-1" size="1.5rem" />
+                <i className="material-icons" size="1.5rem">create</i>
                 Create a Website
               </Link>
             </li>
